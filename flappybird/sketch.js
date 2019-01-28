@@ -1,4 +1,4 @@
-const population = 250;
+const population = 500;
 let birds = [];
 let savedBirds = [];
 let pipes = [];
