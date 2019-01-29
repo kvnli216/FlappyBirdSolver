@@ -3,12 +3,15 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const router = require('./router');
+const db = require('../db/model');
+const path = require('path');
 
 // Middleware
-app.use(bodyParser.urlencoded());
+app.use(express.static(path.join(__dirname, '../public')));
 app.use(morgan('dev'));
-
-app.use('/', express.static(path.join(__dirname, '/../client/dist')));
+// app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 
 // Routes
 app.use('/', router);
@@ -19,4 +22,9 @@ app.use((req, res, next) => {
   res.send({ error: 'Not Found' });
 });
 
-module.exports = app;
+const port = 1337;
+app.listen(port, () => console.log(`App listening on port ${port}!`))
+
+module.exports = {
+  app,
+};

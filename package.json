@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel client --out-dir public --presets=env,react --source-maps inline --watch",
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "start": "nodemon --inspect server/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,14 +21,17 @@
   },
   "homepage": "https://github.com/THlEF/hrsf108-mvp#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
+    "mysql2": "^1.6.4",
     "node": "^11.7.0",
     "nodemon": "^1.18.9",
-    "p5": "^0.7.3"
+    "p5": "^0.7.3",
+    "sequelize": "^4.42.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
