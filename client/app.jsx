@@ -56,8 +56,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>
+          Kevin Li's Hackreactor MVP - Flappybird + Machine Learning
+        </h1>
+        <h3>
+          SCORE BOARD
+        </h3>
         <div>
-          Best Bird Tracker:
+          <b>Best Bird Tracker:</b>
           <div>
             Generation: {this.state.bestRun[0]}
           </div>
@@ -67,7 +73,7 @@ class App extends React.Component {
         </div>
         <br></br>
         <div>
-          Last run:
+          <b>Last run:</b>
           <div>
             Generation: {this.state.lastRun[0]}
           </div>
